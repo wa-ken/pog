@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @horse.name %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @horse.gender %>
+</p>
+
+<p>
+  <strong>Father:</strong>
+  <%= @horse.father %>
+</p>
+
+<p>
+  <strong>Mother:</strong>
+  <%= @horse.mother %>
+</p>
+
+<p>
+  <strong>Reward:</strong>
+  <%= @horse.reward %>
+</p>
+
+<p>
+  <strong>Owner:</strong>
+  <%= @horse.owner %>
+</p>
+
+<p>
+  <strong>Stable:</strong>
+  <%= @horse.stable %>
+</p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @horse.number %>
+</p>
+
+<%= link_to 'Edit', edit_horse_path(@horse) %> |
+<%= link_to 'Back', horses_path %>
