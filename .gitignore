@@ -13,4 +13,11 @@
 
 # Ignore all logfiles and tempfiles.
 /log/*.log
+~
 /tmp
+
+public/
+config/secret.yml
+vendor/ruby/
+vendor/cache/
+vendor/bundler
