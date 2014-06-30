@@ -4,7 +4,7 @@ class Horse < ActiveRecord::Base
 
   def self.upload
 
-    CSV.foreach("public/data2.csv") do |row|
+    CSV.foreach("data2.csv") do |row|
       if row[0] != "血統登録番号" then
         horse = Horse.find(row[0])
         if horse == nil then
