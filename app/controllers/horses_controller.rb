@@ -1,10 +1,10 @@
 class HorsesController < ApplicationController
   before_action :set_horse, only: [:show, :edit, :update, :destroy]
-
+  require 'csv'
   # GET /horses
   # GET /horses.json
   def index
-    @horses = Horse.all
+    @horses = Horse.order('reward2 DESC')
   end
 
   # GET /horses/1
@@ -62,6 +62,11 @@ class HorsesController < ApplicationController
   end
 
   def test
+  end
+  def upload
+    Horse.upload
+    @horses = Horse.order('reward')
+    render :index
   end
 
   private

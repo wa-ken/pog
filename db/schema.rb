@@ -15,13 +15,18 @@ ActiveRecord::Schema.define(version: 20140621001512) do
 
   create_table "horses", force: true do |t|
     t.string   "name"
-    t.boolean  "gender"
+    t.string   "gender"
+    t.integer  "age"
+    t.string   "status"
+    t.string   "stable"
     t.string   "father"
     t.string   "mother"
+    t.string   "grandfather"
     t.integer  "reward"
+    t.integer  "reward2"
+    t.string   "records"
     t.string   "owner"
-    t.string   "stable"
-    t.integer  "number"
+    t.string   "producer"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

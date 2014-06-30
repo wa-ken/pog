@@ -1,3 +1,4 @@
+<%= @test %>
 <h1>Listing horses</h1>
 
 <table>
@@ -22,13 +23,10 @@
         <td><%= horse.gender %></td>
         <td><%= horse.father %></td>
         <td><%= horse.mother %></td>
-        <td><%= horse.reward %></td>
+        <td><%= horse.reward2 %></td>
         <td><%= horse.owner %></td>
         <td><%= horse.stable %></td>
-        <td><%= horse.number %></td>
-        <td><%= link_to 'Show', horse %></td>
-        <td><%= link_to 'Edit', edit_horse_path(horse) %></td>
-        <td><%= link_to 'Destroy', horse, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= horse.id %></td>
       </tr>
     <% end %>
   </tbody>
@@ -36,4 +34,4 @@
 
 <br>
 
-<%= link_to 'New Horse', new_horse_path %>
+
