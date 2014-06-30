@@ -6,8 +6,9 @@ class Horse < ActiveRecord::Base
 
     CSV.foreach("data2.csv") do |row|
       if row[0] != "血統登録番号" then
-        horse = Horse.find(row[0])
-        if horse == nil then
+        if Horse.exists?(:id => row[0]) then
+          horse = Horse.find(row[0])
+        else
           horse = Horse.new
           horse.id = row[0]
         end
