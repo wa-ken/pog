@@ -16,7 +16,7 @@
         <td><%= user.sum_rewards %></td>
         <td><ul><% user.user_horses.each do |data| %>
           <% if data.horse.present? %>
-            <li><%= data.horse.name %></li>
+            <li><%= link_to data.horse.name, "horses/#{data.horse.id}" %></li>
           <% end %>
         <% end %>
         </ul>
