@@ -4,7 +4,10 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    @users = User.all
+    @users = User.all()
+    @users.to_a.sort! { |a, b|
+      b.sum_rewards <=> a.sum_rewards
+      }
   end
 
   # GET /users/1
