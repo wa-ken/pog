@@ -1,11 +1,17 @@
 <table class = "users_index">
+  <tr>
+    <th>順位</th>
+    <th>名前</th>
+    <th>成績</th>
+    <th>所有馬（入厩済）</th>
+  </tr>
   <tbody>
     <% @users.each.with_index do |user, i| %>
       <tr>
         <td class = "rank"><%= i + 1 %>
         <td class = "name"><%= user.name %></td>
         <td class = "reward"><%= user.sum_rewards %></td>
-        <td class = "horses"><ul><% user.user_horses.each do |data| %>
+        <td class = "horses"><ul><% user.horses.each do |data| %>
           <% if data.horse.present? %>
             <li><%= link_to data.horse.name, "horses/#{data.horse.id}" %></li>
           <% end %>

@@ -10,4 +10,8 @@ class User < ActiveRecord::Base
     end
     sum
   end
+
+  def horses
+    self.user_horses
+  end
 end
