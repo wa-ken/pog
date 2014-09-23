@@ -1,0 +1,9 @@
+<div class = "ranking">
+  <% @users.each.with_index do |user,i| %>
+  <div class = "user">
+    <p><%= i+1 %></p>
+    <p><%= user.name %></p>
+    <p><%= user.sum_rewards %>万円</p>
+  </div>
+  <% end %>
+</div>

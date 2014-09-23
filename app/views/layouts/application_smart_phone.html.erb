@@ -1,0 +1,14 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>POG</title>
+<%= stylesheet_link_tag 'application_smart_phone', media: 'all' %>
+<meta name="viewport" content="width=device-width">
+</head>
+<body>
+<div class = "header">
+<h1><%= link_to image_tag("logo.png", :class => "logo"), root_path %></h1>
+</div>
+<%= yield %>
+</body>
+</html>
