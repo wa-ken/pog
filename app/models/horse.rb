@@ -1,10 +1,13 @@
 class Horse < ActiveRecord::Base
 
   require 'csv'
+  require 'kconv'
 
-  def self.upload
+  def self.upload(filename)
+    
+    filename_text = filename.read
 
-    CSV.foreach("data2.csv") do |row|
+    CSV.parse(Kconv.toutf8(filename_text)) do |row|
       if row[0] != "血統登録番号" then
         if Horse.exists?(:id => row[0]) then
           horse = Horse.find(row[0])

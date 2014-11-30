@@ -64,11 +64,12 @@ class HorsesController < ApplicationController
   def test
   end
   def upload
-    Horse.upload
-    @horses = Horse.order('reward')
-    render :index
   end
 
+  def update_horses_data
+    Horse.upload(params[:filename])
+    redirect_to root_path
+  end
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_horse
