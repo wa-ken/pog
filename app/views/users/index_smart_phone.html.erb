@@ -1,13 +1,20 @@
 <div class = "ranking">
   <% @users.each.with_index do |user,i| %>
   <div class = "user">
-    <p><%= i+1 %>: <%= user.name %>-<%= user.sum_rewards %>万円</p>
-    <p><% user.horses.each do |data| %>
-    <% if data.horse.present? %>
-      <%= link_to data.horse.name, "horses/#{data.horse.id}" %>
-    <% end %>
-    <% end %>
-    </p>
+    <div class = "panel">
+      <div class = "ribon">
+        <span class = "rank"><%= i+1 %>位</span>
+      </div>
+      <p><%= user.name %>
+      <span class = "reward"><%= user.sum_rewards %>万円</span>
+      <p>
+      <p class = "horses"><% user.horses.each do |data| %>
+        <% if data.horse.present? %>
+          <%= link_to data.horse.name, "horses/#{data.horse.id}" %>
+        <% end %>
+      <% end %>
+      </p>
+    </div>
   </div>
   <% end %>
 </div>

@@ -3,5 +3,30 @@
 }
 
 .user {
-  margin-bottom: 30px;
+  margin-bottom: 50px;
+}
+
+.horses {
+  font-size: 13px;
+
+}
+
+.ribon {
+  width: 23%;
+  top: 5px;
+  padding: 3px 5px 3px 0;
+  text-align: center;
+  background: #265A3C;
+  color: #FFF;
+  box-shadow: 5px 0 0 0 #265A3C, -5px 0 0 0 red, 0 3px 5px 0 rgba(0, 0, 0, 0.5);
+}
+
+.reward {
+  margin: 5px 5px 5px 5px;
+  color: red;
+  font-size: 20px;
+}
+
+.panel {
+  margin-top: 10px;
 }
