@@ -1,23 +1,21 @@
-<p id="notice"><%= notice %></p>
+<div class="leftpart">
+  <h2><%= @horse.name %></h2>
+  <table>
+    <tr>
+      <td rowspan="2"><strong><%= @horse.name %></strong></td>
+      <td class="father"><%= @horse.father %></td>
+    </tr>
+    <tr>
+      <td class="mother"><%= @horse.mother %></td>
+    </tr>
+  </table>
 
-<p>
-  <strong>Name:</strong>
-  <%= @horse.name %>
-</p>
+
+<p id="notice"><%= notice %></p>
 
 <p>
   <strong>Gender:</strong>
   <%= @horse.gender %>
-</p>
-
-<p>
-  <strong>Father:</strong>
-  <%= @horse.father %>
-</p>
-
-<p>
-  <strong>Mother:</strong>
-  <%= @horse.mother %>
 </p>
 
 <p>
@@ -34,10 +32,5 @@
   <strong>Stable:</strong>
   <%= @horse.stable %>
 </p>
-
-<p>
-  <strong>Number:</strong>
-  <%= @horse.id %>
-</p>
-
+</div>
 <%= link_to 'Back', users_path %>
