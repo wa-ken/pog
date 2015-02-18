@@ -41,3 +41,6 @@ gem 'therubyracer'
 gem 'execjs'
 
 gem 'jpmobile'
+gem 'devise'
+gem 'omniauth'
+gem 'omniauth-google-oauth2'
