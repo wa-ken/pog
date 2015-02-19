@@ -78,6 +78,6 @@ class HorsesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def horse_params
-      params.require(:horse).permit(:name, :gender, :father, :mother, :reward, :owner, :stable, :number)
+      params.require(:horse).permit(:name, :gender, :father, :mother, :reward, :owner, :stable, :number, :avatar)
     end
 end

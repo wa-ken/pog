@@ -44,3 +44,5 @@ gem 'jpmobile'
 gem 'devise'
 gem 'omniauth'
 gem 'omniauth-google-oauth2'
+
+gem 'carrierwave'

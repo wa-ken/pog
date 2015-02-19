@@ -3,6 +3,8 @@ class Horse < ActiveRecord::Base
   require 'csv'
   require 'kconv'
 
+  mount_uploader :avatar, AvatarUploader
+
   def self.upload(filename)
     
     filename_text = filename.read
