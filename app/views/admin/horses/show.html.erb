@@ -1,0 +1,25 @@
+<div class="image">
+  <%= image_tag @horse.avatar.url %>
+</div>
+<div class="leftpart">
+  <h2><%= @horse.name %>(<%= @horse.gender %>)</h2>
+  <table>
+    <tr>
+      <td rowspan="2"><strong><%= @horse.name %></strong></td>
+      <td class="father"><%= @horse.father %></td>
+    </tr>
+    <tr>
+      <td class="mother"><%= @horse.mother %></td>
+    </tr>
+  </table>
+
+<p>
+<h3><strong>総賞金:</strong>
+  <%= @horse.reward2 %></h3>
+</p>
+
+<p>
+  <%= @horse.stable %>
+  <%= @horse.owner %>
+</p>
+</div>

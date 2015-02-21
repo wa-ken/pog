@@ -1,0 +1,39 @@
+<%= form_for(@horse) do |f| %>
+  <% if @horse.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@horse.errors.count, "error") %> prohibited this horse from being saved:</h2>
+
+      <ul>
+      <% @horse.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>:<%= @horse.name %>
+  </div>
+  <div class="field">
+    <%= f.label :gender %>:<%= @horse.gender %>
+  </div>
+  <div class="field">
+    <%= f.label :father %>:<%= @horse.father %>
+  </div>
+  <div class="field">
+    <%= f.label :mother %>:<%= @horse.mother %>
+  </div>
+  <div class="field">
+    <%= f.label :reward %>:<%= @horse.reward2 %>
+  </div>
+  <div class="field">
+    <%= f.label :owner %>:<%= @horse.owner %>
+  </div>
+  <div class="field">
+    <%= f.label :avatar %><br>
+    <%= f.file_field :avatar %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

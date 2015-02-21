@@ -1,0 +1,37 @@
+<%= @test %>
+<h1>Listing horses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Gender</th>
+      <th>Father</th>
+      <th>Mother</th>
+      <th>Reward</th>
+      <th>Owner</th>
+      <th>Stable</th>
+      <th>Number</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @horses.each do |horse| %>
+      <tr>
+        <td><%= horse.name %></td>
+        <td><%= horse.gender %></td>
+        <td><%= horse.father %></td>
+        <td><%= horse.mother %></td>
+        <td><%= horse.reward2 %></td>
+        <td><%= horse.owner %></td>
+        <td><%= horse.stable %></td>
+        <td><%= horse.id %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
