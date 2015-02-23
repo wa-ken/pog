@@ -1,5 +1,5 @@
 <div class="image">
-  <%= image_tag @horse.avatar.url %>
+  <%= image_tag ( @horse.avatar.url.presence || "058750.jpg" ), :class => "horse-image" %>
 </div>
 <div class="leftpart">
   <h2><%= @horse.name %>(<%= @horse.gender %>)</h2>
