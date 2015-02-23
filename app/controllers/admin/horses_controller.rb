@@ -4,7 +4,7 @@ class Admin::HorsesController < ApplicationController
   before_action :set_horse, only: [:show, :edit, :update, :destroy]
 
   def index
-    @horses = Horse.order('reward2 DESC')
+    @horses = Horse.order('reward2 DESC').page params[:page]
   end
 
   # GET /horses/1.json

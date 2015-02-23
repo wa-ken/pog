@@ -4,7 +4,7 @@ class HorsesController < ApplicationController
   # GET /horses
   # GET /horses.json
   def index
-    @horses = Horse.order('reward2 DESC')
+    @horses = Horse.order('reward2 DESC').page params[:page]
   end
 
   # GET /horses/1
