@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pog</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+<div class = "header">
+<div class = "menu">
+  <ul>
+  <li><strong>POG</strong></li>
+  <li><%= link_to "horses", admins_horses_path %></li>
+</ul>
+</div>
+</div>
+<%= yield %>
+
+</body>
+</html>

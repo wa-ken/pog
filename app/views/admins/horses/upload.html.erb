@@ -1,0 +1,11 @@
+<h1>データ更新</h1>
+<%= form_tag({action: "update_horses_data", method: "post"},{multipart: true}) do %>
+  <div class = "field">
+    <%= label_tag "csvファイルを選択" %><br />
+    <%= file_field_tag :filename %>
+  </div>
+
+  <div class="actions">
+    <%= submit_tag "アップデート" %>
+  </div>
+<% end %>
