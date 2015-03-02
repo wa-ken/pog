@@ -4,7 +4,23 @@
 
 @import "compass";
 
+
+@mixin  gradient-top-lighten($color: #C4C04B, $lighten:15%){
+  background-color: $color;
+  @include filter-gradient(lighten($color, $lighten), $color, vertical);
+  @include background-image(linear-gradient(lighten($color, $lighten) 0%, $color 100%));
+}
+
+
 $color: #6db362;
+
+
+.rank{
+  @include gradient-top-lighten;
+  width: 100px;
+  size: 12px;
+  text-align: center;
+}
 
 .user-reward{
   color: $color;
@@ -21,9 +37,6 @@ ul{
   margin-left: 5px;
 }
 
-.line{
-  margin-left: 5px;
-  margin-right: 5px;
-  border-bottom: 1px solid rgba(0, 0, 0, .2);
-  @include box-shadow(rgba(255,255,255, .3)0 1px 0);
+.user {
+  margin-bottom: 50px;
 }

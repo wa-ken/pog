@@ -4,22 +4,9 @@
 
 @import "compass";
 
-@mixin  gradient-top-lighten($color: #C4C04B, $lighten:15%){
-  background-color: $color;
-  @include filter-gradient(lighten($color, $lighten), $color, vertical);
-  @include background-image(linear-gradient(lighten($color, $lighten) 0%, $color 100%));
-}
-
 .horse-image{
   width: 300px;
   @include border-radius();
-}
-
-.rank{
-  @include gradient-top-lighten;
-  width: 100px;
-  size: 12px;
-  text-align: center;
 }
 
 .image{
