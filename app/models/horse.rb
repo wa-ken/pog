@@ -2,6 +2,10 @@ class Horse < ActiveRecord::Base
 
   require 'csv'
   require 'kconv'
+  
+  has_many :horse_races, dependent: :destroy
+  has_many :races, through: :race_horses
+
 
   mount_uploader :avatar, AvatarUploader
 

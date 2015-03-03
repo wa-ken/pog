@@ -27,10 +27,6 @@ $color: #6db362;
   font-size: 15px;
 }
 
-ul{
-  padding: 0;
-}
-
 .user-horse{
   list-style: none;
   float: left;
@@ -39,4 +35,7 @@ ul{
 
 .user {
   margin-bottom: 50px;
+  ul{
+    padding: 0;
+  }
 }

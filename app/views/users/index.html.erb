@@ -6,7 +6,7 @@
     <p class="horses"><ul>
       <% user.horses.each do |data| %>
         <% if data.horse.present? %>
-          <li class="user-horse"><%= link_to data.horse.name, horse_path(data) %></li>
+          <li class="user-horse"><%= link_to data.horse.name, horse_path(data.horse) %></li>
         <% end %>
       <% end %>
     </ul></p>

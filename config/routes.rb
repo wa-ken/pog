@@ -8,8 +8,8 @@ Rails.application.routes.draw do
   resources :horses, :only => [:index, :show ]
 
   root 'users#index'
-  get 'admin/upload' => 'admin/horses#upload'
-  post 'update_horses_data' => 'admin/horses#update_horses_data'
+  get 'admins/upload' => 'admins/horses#upload'
+  post 'update_horses_data' => 'admins/horses#update_horses_data'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
