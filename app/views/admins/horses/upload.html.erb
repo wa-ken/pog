@@ -9,3 +9,13 @@
     <%= submit_tag "アップデート" %>
   </div>
 <% end %>
+<%= form_tag({action: "update_races_data", method: "post"},{multipart: true}) do %>
+  <div class = "field">
+    <%= label_tag "csvファイル(Race)を選択" %><br />
+    <%= file_field_tag :filename2 %>
+  </div>
+
+  <div class="actions">
+    <%= submit_tag "アップデート" %>
+  </div>
+<% end %>

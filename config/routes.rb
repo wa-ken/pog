@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   root 'users#index'
   get 'admins/upload' => 'admins/horses#upload'
   post 'update_horses_data' => 'admins/horses#update_horses_data'
-
+  post 'update_races_data' => 'admins/horses#update_races_data'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
