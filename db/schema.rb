@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150305131827) do
+ActiveRecord::Schema.define(version: 20150311130944) do
 
   create_table "admins", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -35,10 +35,21 @@ ActiveRecord::Schema.define(version: 20150305131827) do
   add_index "admins", ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true, using: :btree
 
   create_table "horse_races", force: true do |t|
-    t.integer  "horse_id",   null: false
-    t.integer  "race_id",    null: false
+    t.integer  "horse_id",      null: false
+    t.integer  "race_id",       null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "jockey"
+    t.string   "basis_weight"
+    t.integer  "horse_number"
+    t.float    "popularity"
+    t.integer  "order"
+    t.integer  "time"
+    t.float    "margin"
+    t.float    "three_furlong"
+    t.integer  "weight"
+    t.integer  "weight_gap"
+    t.integer  "reward"
   end
 
   add_index "horse_races", ["horse_id"], name: "index_horse_races_on_horse_id", using: :btree
