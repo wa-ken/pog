@@ -69,7 +69,7 @@ class Admins::HorsesController < ApplicationController
   end
 
   def update_races_data
-    Race.upload(params[:filename2])
+    HorseRace.upload(params[:filename2])
     redirect_to root_path
   end
   private

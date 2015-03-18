@@ -4,7 +4,7 @@ class Horse < ActiveRecord::Base
   require 'kconv'
   
   has_many :horse_races, dependent: :destroy
-  has_many :races, through: :race_horses
+  has_many :races, through: :horse_races
 
 
   mount_uploader :avatar, AvatarUploader

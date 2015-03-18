@@ -10,6 +10,7 @@ class HorsesController < ApplicationController
   # GET /horses/1
   # GET /horses/1.json
   def show
+    @horse_races = @horse.horse_races
   end
 
   private

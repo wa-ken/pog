@@ -3,7 +3,7 @@ class Race < ActiveRecord::Base
   require 'csv'
   require 'kconv'
 
-  has_many :horse_race, dependent: :destroy
+  has_many :horse_races, dependent: :destroy
   has_many :horses, through: :horse_races
   
   def self.upload(filename)

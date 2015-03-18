@@ -23,3 +23,46 @@
   <%= @horse.owner %>
 </p>
 </div>
+<div>
+<table class = "horse-data">
+<tr>
+  <th>日付</th>
+  <th>開催</th>
+  <th>レース名</th>
+  <th>頭数</th>
+  <th>umaban</th>
+  <th>odds</th>
+  <th>ninnki</th>
+  <th>tyakujun</th>
+  <th>jockey</th>
+  <th>kinn</th>
+  <th>baba</th>
+  <th>time</th>
+  <th>tyakusa</th>
+  <th>agari</th>
+  <th>bataijuu</th>
+  <th>sholin</th>
+<tr>
+  <% @horse_races.each do |horse_race| %>
+  <% race = horse_race.race %> 
+  <tr>
+    <td><%= race.date %></td>
+    <td><%= race.meeting %></td>
+    <td><%= race.name %></td>
+    <td><%= race.horse_races.length %></td>
+    <td><%= horse_race.horse_number %></td>
+    <td><%= horse_race.popularity %></td>
+    <td></td>
+    <td><%= horse_race.order %></td>
+    <td><%= horse_race.jockey %></td>
+    <td><%= horse_race.basis_weight %></td>
+    <td><%= race.track_condition %></td>
+    <td><%= horse_race.time %></td>
+    <td><%= horse_race.margin %></td>
+    <td><%= horse_race.three_furlong %></td>
+    <td><%= horse_race.weight %></td>
+    <td><%= horse_race.reward %></td>
+  </tr>
+<% end %>
+</table>
+</div>
